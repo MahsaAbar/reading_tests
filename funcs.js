@@ -1,25 +1,17 @@
 const isFive = num =>{
-    if (num === 5){
-        return true
-    }
-    return false
+    return (num === 5)
 };
 
 const isOdd = number =>{
-    if(typeof(number) == 'number'){
+    if (typeof number !== "number") {
+        return number
+      }else{
         if(number % 2 !== 0){
             return true
         }
         return false
     }
-    return "Error";
 };
-console.log(isOdd ({ i: "am", an: "object" }))
-console.log(isOdd (["i", "am", "an", "array"]))
-console.log(isOdd("i am a string"))
-console.log(isOdd(2953))
-console.log(isOdd(2952))
-console.log(isOdd("hello"))
 
 const myRange = (min, max, step) =>{
     let newrange = [];
@@ -38,10 +30,7 @@ const myRange = (min, max, step) =>{
     }
     return newrange
 };
-// console.log(myRange(10, 5, 1))
-// console.log(isOdd(2953))
-// console.log(isOdd(2952))
-// console.log(isOdd("hello"))
+
 /************************/
 module.exports = {
     isFive,
